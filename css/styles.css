@@ -9,6 +9,7 @@
   --fortfolio-filter-color: #f5f4fa;
   --line-border-color: #ececec;
   --card-border-color: #eeeeee;
+  --footer-color-contact: rgba(255, 255, 255, 0.6);
 }
 
 html {
@@ -252,11 +253,17 @@ body {
 }
 .address {
   display: block;
-  color: var(--main-home-color);
   line-height: 1.7;
   font-style: normal;
   padding-bottom: 9px;
 }
+.contact {
+  color: var(--main-home-color);
+}
+.meil-tel {
+  color: var(--footer-color-contact);
+}
+
 .address-design {
   margin: 0;
   padding: 0;
