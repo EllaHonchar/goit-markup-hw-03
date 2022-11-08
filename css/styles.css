@@ -20,7 +20,47 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
+/* скидання стилів */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+}
+img {
+  display: block;
+}
+a,
+a:hover,
+a:focus,
+a:active,
+:focus,
+:active {
+  outline: none;
+  text-decoration: none;
+}
+button {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+ul li {
+  list-style: none;
+}
 body {
   background-color: var(--main-home-color);
   color: var(--title-text-color);
@@ -30,66 +70,62 @@ body {
   margin: 0;
 }
 
-.container {
-  width: 1230px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.main-header {
+/* .main-header {
   display: flex;
   align-items: center;
-}
-.header-line {
+} */
+.header {
   border-bottom: 1px solid var(--line-border-color);
+}
+.header > .container {
+  display: flex;
+  justify-content: space-between;
 }
 .menu {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
-.list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.site-nav {
+.menu > .site-nav {
   display: flex;
-  padding-left: 0;
+  padding: 0px;
 }
-.site-nav .list {
+.menu > .site-nav .link {
   display: block;
-  margin-right: 50px;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-.site-nav .list:last-child {
-  margin-right: 0;
-}
-.site-nav .list:first-child {
-  margin-left: 93px;
+.menu > .site-nav > .list:not(:last-child) {
+  margin-right: 50px;
 }
 .contact-nav {
   display: flex;
-  margin-left: auto;
+  align-items: center;
+}
+.contact-nav > .list:not(:last-child) {
   padding-left: 0;
+  margin-right: 50px;
 }
-.contact-nav .list + .list {
-  margin-left: 50px;
+.contact-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
-/*почему-то не передается по нити главный цвет из body*/
+
 .header-logo {
   color: var(--title-text-color);
   font-family: "Raleway", sans-serif;
   font-size: 26px;
+  margin-right: 93px;
+  font-weight: 700;
+  line-height: 1.19;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .logo {
   color: var(--button-hero-color);
 }
 
-.link {
-  text-decoration: none;
-}
 .item {
   letter-spacing: 0.02em;
 }
@@ -101,11 +137,6 @@ body {
   color: var(--main-text-color);
 }
 
-.proff {
-  font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 30px;
-}
 /*почему-то не передается по нити главный цвет из body*/
 .link-color {
   color: var(--title-text-color);
@@ -122,28 +153,33 @@ body {
   color: var(--button-hero-color);
 }
 .hero-head {
-  text-align: center;
-  width: 1600px;
-  height: 600px;
+  /*width: 1600px;
+  height: 600px;*/
+  padding-top: 200px;
+  padding-bottom: 200px;
   background: var(--title-studio-color);
   color: var(--main-home-color);
 }
+.head-content {
+  margin: auto;
+  width: 696px;
+  display: flex;
+}
 .title-studio {
+  display: flex;
+  text-align: center;
   font-size: 44px;
   line-height: 1.4;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin: 0;
-  padding-top: 200px;
-  padding-left: 452px;
-  padding-right: 452px;
-  border: none;
   margin-bottom: 30px;
 }
 .btn {
   background-color: var(--button-hero-color);
   color: var(--main-home-color);
   font-family: inherit;
+  display: block;
+  margin: auto;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
@@ -155,25 +191,38 @@ body {
 .btn:focus {
   background-color: var(--button-hero-activ);
 }
-.future {
-  width: 1170px;
-  margin-left: 215px;
+
+.container {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.feature-list {
+.feature {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.feature > .container > .feature-list {
   display: flex;
-  flex-wrap: wrap;
-  padding: 0;
 }
-.feature-list .list {
+.feature .list {
   width: 270px;
+}
+.feature > .container > .feature-list > .list:not(:last-child) {
   margin-right: 30px;
 }
-.feature-title {
+.feature .feature-title {
+  margin-top: 0px;
   margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: start;
 }
-.feature-list .list:last-child {
-  margin-right: 0;
+.view {
+  line-height: 1.7;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -186,6 +235,9 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+.description {
+  padding-bottom: 94px;
+}
 .title-desc {
   font-size: 36px;
   margin: 0;
@@ -194,8 +246,6 @@ body {
 }
 .desc {
   display: flex;
-  padding: 0;
-  margin-bottom: 94px;
 }
 .desc .list {
   margin-right: 30px;
@@ -203,60 +253,59 @@ body {
 .desc .list:last-child {
   margin-right: 0;
 }
-.view {
-  line-height: 1.7;
-}
-.team-head {
-  background-color: var(--section-team-background);
+.work {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 .team {
   padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: var(--section-team-background);
 }
 .proper-team {
   display: flex;
-  padding: 0;
-  margin: 0;
 }
 .proper-team .list {
-  margin-right: 30px;
-  margin-bottom: 94px;
   text-align: center;
   border-radius: 4px;
   background-color: var(--main-home-color);
 }
-.proper-team .list:last-child {
-  margin-right: 0px;
+.proff {
+  font-size: 16px;
+}
+.proper-team .list:not(:last-child) {
+  margin-right: 30px;
 }
 .team-person {
   font-size: 16px;
-  margin-top: 0;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
-.team-foto {
-  margin-bottom: 30px;
+.team-content {
+  padding: 30px 32px;
 }
+
 .footer-style {
   background-color: var(--title-studio-color);
-  height: 252px;
+  padding: 60px 0;
 }
 .footer {
   display: block;
   color: var(--main-home-color);
   font-family: "Raleway", sans-serif;
   font-size: 26px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
-.footer-design {
-  padding-top: 60px;
-  padding-left: 0;
-  padding-right: 0;
-}
+
 .address {
   display: block;
   line-height: 1.7;
   font-style: normal;
-  padding-bottom: 9px;
 }
+.address-design .list:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .contact {
   color: var(--main-home-color);
 }
@@ -269,25 +318,24 @@ body {
   padding: 0;
 }
 
+/* Portfolio */
+
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .filter {
   display: flex;
   justify-content: center;
-  padding-left: 0;
-  margin: 0;
 }
-.filter .list {
-  display: block;
+
+.filter .list:not(:last-child) {
   margin-right: 8px;
-  padding-top: 94px;
-  padding-bottom: 50px;
-}
-.filter .list:last-child {
-  margin-right: 0px;
 }
 .filter-button {
   font-size: 16px;
   font-family: inherit;
-  line-height: 1.6;
+  line-height: 1.63;
   letter-spacing: 0.03em;
   padding: 6px 22px;
   background-color: var(--fortfolio-filter-color);
@@ -307,40 +355,38 @@ body {
   background-color: var(--button-hero-color);
   color: var(--main-home-color);
 }
-/*почему-то не передается по нити главный цвет из body*/
+.portfolio .filter:first-of-type {
+  margin-bottom: 50px;
+}
+.info {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
 .title-project {
   color: var(--title-text-color);
   font-size: 18px;
+  font-weight: 700;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin-top: 20px;
-  margin-left: 24px;
-  margin-top: 24px;
   margin-bottom: 4px;
 }
 .kind-project {
   color: var(--main-text-color);
   font-size: 16px;
   line-height: 1.9;
-  margin-top: 0;
-  margin-left: 24px;
-  margin-top: 24px;
-  margin-bottom: 20px;
-}
-.card-list {
-  padding: 0;
+  display: inline-block;
   margin: 0;
-  list-style: 0;
 }
+
 .flex-card {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 94px;
-  padding-left: 0;
 }
 .element-card {
   width: 370px;
-
   margin-right: 30px;
   margin-bottom: 30px;
   background-color: var(--main-home-color);

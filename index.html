@@ -19,8 +19,8 @@
   </head>
   <body>
     <!--шапка сайта-->
-    <header class="header-line">
-      <div class="container main-header">
+    <header class="header">
+      <div class="container">
         <nav class="menu">
           <a href="/" class="header-logo link">
             <span class="logo" lang="en">Web</span>Studio</a
@@ -62,14 +62,16 @@
     <main>
       <!--Герой-->
       <section class="hero-head">
-        <h1 class="title-studio">Ефективні рішення для вашого бізнесу</h1>
+        <div class="head-content">
+        <h1 class="title-studio">Ефективні рішення для вашого бізнесу</h1></div>
         <button class="btn" type="button">Замовити послугу</button>
+      
       </section>
 
       <!--особливості-->
-      <section class="container feature">
-        <h2 hidden class="visually-hidden">Особливості</h2>
-        <div class="">
+      <section class="feature">
+        <div  class="container">
+          <h2 hidden class="visually-hidden">Особливості</h2>
           <ul class="feature-list">
             <li class="list">
               <h3 class="feature-title">УВАГА ДО ДЕТАЛЕЙ</h3>
@@ -103,11 +105,12 @@
       </section>
 
       <!--чим ми займаємося-->
-      <section class="container">
+      <section class="description">
+        <div class="container">
         <h2 class="title-desc">Чим ми займаємося</h2>
         <ul class="desc">
           <li class="list">
-            <img
+            <img class="work"
               src="./images/img1.jpg"
               alt="десктопні додатки"
               width="370"
@@ -115,7 +118,7 @@
             />
           </li>
           <li class="list">
-            <img
+            <img class="work"
               src="./images/img2.jpg"
               alt="мобільні додатки"
               width="370"
@@ -123,7 +126,7 @@
             />
           </li>
           <li class="list">
-            <img
+            <img class="work"
               src="./images/img3.jpg"
               alt="дизайнерські рішення"
               width="370"
@@ -131,11 +134,12 @@
             />
           </li>
         </ul>
+      </div>
       </section>
 
       <!--наша команда-->
-      <section class="team-head">
-        <div class="container team">
+      <section class="team">
+        <div class="container">
           <h2 class="title-desc">Наша команда</h2>
           <ul class="proper-team">
             <li class="list">
@@ -146,8 +150,9 @@
                 width="270"
                 height="260"
               />
+              <div class="team-content">
               <h3 class="team-person">Ігор Дем'яненко</h3>
-              <p class="text-color proff" lang="en">Product Designer</p>
+              <p class="text-color proff" lang="en">Product Designer</p></div>
             </li>
             <li class="list">
               <img
@@ -157,8 +162,9 @@
                 width="270"
                 height="260"
               />
+              <div class="team-content">
               <h3 class="team-person">Ольга Рєпіна</h3>
-              <p class="text-color proff" lang="en">Frontend Developer</p>
+              <p class="text-color proff" lang="en">Frontend Developer</p></div>
             </li>
             <li class="list">
               <img
@@ -168,8 +174,9 @@
                 width="270"
                 height="260"
               />
+              <div class="team-content">
               <h3 class="team-person">Микола Тарасов</h3>
-              <p class="text-color proff" lang="en">Marketing</p>
+              <p class="text-color proff" lang="en">Marketing</p></div>
             </li>
             <li class="list">
               <img
@@ -179,8 +186,9 @@
                 width="270"
                 height="260"
               />
+              <div class="team-content">
               <h3 class="team-person">Михайло Єрмаков</h3>
-              <p class="text-color proff" lang="en">UI Designer</p>
+              <p class="text-color proff" lang="en">UI Designer</p></div>
             </li>
           </ul>
         </div>
@@ -189,7 +197,7 @@
 
     <!--підвал-->
     <footer class="footer-style">
-      <div class="container footer-design">
+      <div class="container">
         <a href="/" class="footer link">
           <span class="logo" lang="en">Web</span>Studio</a
         >
